@@ -10,6 +10,7 @@ namespace Dyson_Sphere_Assembly_Line_Domain
         Assembler,
         OilRefinery,
         ChemicalPlant,
-        ParticleCollider
+        ParticleCollider,
+        MatrixLab
     }
 }

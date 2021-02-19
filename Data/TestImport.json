@@ -1,5 +1,5 @@
 {
-    "recipes":[{
+    "recipes": [{
             "ComponentName": "Magnetic Coil",
             "MachineType": "Assembler",
             "NumberProduced": 2,
@@ -26,10 +26,959 @@
                 }
             ],
             "AdditionalOutput": [{
-                    "ComponentName": "Fire Ice",
+                    "ComponentName": "Hydrogen",
                     "Count": 2
                 }
             ]
-        }
+        }, {
+            "ComponentName": "Deuterium",
+            "MachineType": "Particle Collider",
+            "NumberProduced": 5,
+            "TimeToCreate": 5,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Hydrogen",
+                    "Count": 10
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Iron Ingot",
+            "MachineType": "Smelter",
+            "NumberProduced": 1,
+            "TimeToCreate": 1,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Iron Ore",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Copper Ingot",
+            "MachineType": "Smelter",
+            "NumberProduced": 1,
+            "TimeToCreate": 1,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Copper Ore",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Stone Brick",
+            "MachineType": "Smelter",
+            "NumberProduced": 1,
+            "TimeToCreate": 1,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Stone",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Energetic Graphite",
+            "MachineType": "Smelter",
+            "NumberProduced": 1,
+            "TimeToCreate": 2,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Coal Ore",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "High-Purity Silicon",
+            "MachineType": "Smelter",
+            "NumberProduced": 1,
+            "TimeToCreate": 2,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Silicon Ore",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Titanium Ingot",
+            "MachineType": "Smelter",
+            "NumberProduced": 1,
+            "TimeToCreate": 2,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Titanium Ore",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Sulfuric Acid",
+            "MachineType": "Chemical Plant",
+            "NumberProduced": 4,
+            "TimeToCreate": 6,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Refined Oil",
+                    "Count": 6
+                }, {
+                    "ComponentName": "Stone",
+                    "Count": 8
+                }, {
+                    "ComponentName": "Water",
+                    "Count": 4
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Refined Oil",
+            "MachineType": "Oil Refinery",
+            "NumberProduced": 2,
+            "TimeToCreate": 4,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Crude Oil",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": [{
+                    "ComponentName": "Hydrogen",
+                    "Count": 1
+                }
+            ]
+        }, {
+            "ComponentName": "Hydrogen Fuel Rod",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 3,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Titanium Ingot",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Hydrogen",
+                    "Count": 5
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Deuteron Fuel Rod",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 6,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Titanium Alloy",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Deuterium",
+                    "Count": 10
+                }, {
+                    "ComponentName": "Super-Magnetic Ring",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Antimatter Fuel Rod",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 12,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Antimatter",
+                    "Count": 10
+                }, {
+                    "ComponentName": "Hydrogen",
+                    "Count": 10
+                }, {
+                    "ComponentName": "Annihilation Constraint Sphere",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Titanium Alloy",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Magnet",
+            "MachineType": "Smelter",
+            "NumberProduced": 1,
+            "TimeToCreate": 1.5,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Iron Ore",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Glass",
+            "MachineType": "Smelter",
+            "NumberProduced": 1,
+            "TimeToCreate": 2,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Stone",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Diamond",
+            "MachineType": "Smelter",
+            "NumberProduced": 1,
+            "TimeToCreate": 2,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Energetic Graphite",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Diamond",
+            "MachineType": "Smelter",
+            "NumberProduced": 1,
+            "TimeToCreate": 2,
+            "Default": false,
+            "Inputs": [{
+                    "ComponentName": "Kimberlite Ore",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Crystal Silicon",
+            "MachineType": "Smelter",
+            "NumberProduced": 1,
+            "TimeToCreate": 1,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "High-Purity Silicon",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Crystal Silicon",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 4,
+            "Default": false,
+            "Inputs": [{
+                    "ComponentName": "Fractal Silicon",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Titanium Alloy",
+            "MachineType": "Smelter",
+            "NumberProduced": 4,
+            "TimeToCreate": 12,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Titanium Ingot",
+                    "Count": 4
+                }, {
+                    "ComponentName": "Sulfuric Acid",
+                    "Count": 8
+                }, {
+                    "ComponentName": "Steel",
+                    "Count": 4
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Plastic",
+            "MachineType": "Chemical Plant",
+            "NumberProduced": 1,
+            "TimeToCreate": 3,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Refined Oil",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Energetic Graphite",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Organic Crystal",
+            "MachineType": "Chemical Plant",
+            "NumberProduced": 1,
+            "TimeToCreate": 6,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Plastic",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Refined Oil",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Water",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Graphene",
+            "MachineType": "Chemical Plant",
+            "NumberProduced": 2,
+            "TimeToCreate": 3,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Energetic Graphite",
+                    "Count": 3
+                }, {
+                    "ComponentName": "Sulfuric Acid",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Thruster",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 4,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Steel",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Copper Ingot",
+                    "Count": 3
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Steel",
+            "MachineType": "Smelter",
+            "NumberProduced": 1,
+            "TimeToCreate": 3,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Iron Ore",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Circuit Board",
+            "MachineType": "Assembler",
+            "NumberProduced": 2,
+            "TimeToCreate": 1,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Iron Ingot",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Copper Ingot",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Prism",
+            "MachineType": "Assembler",
+            "NumberProduced": 2,
+            "TimeToCreate": 2,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Glass",
+                    "Count": 3
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Electric Motor",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 2,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Iron Ingot",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Gear",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Magnetic Coil",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Microcrystalline Component",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 2,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "High-Purity Silicon",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Copper Ingot",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Casimir Crystal",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 4,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Titanium Crystal",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Graphene",
+                    "Count": 2
+                }, {
+                    "ComponentName" "Hydrogen",
+                    "Count": 12
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Casimir Crystal",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 4,
+            "Default": false,
+            "Inputs": [{
+                    "ComponentName": "Optical Grating Crystal",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Graphene",
+                    "Count": 2
+                }, {
+                    "ComponentName" "Hydrogen",
+                    "Count": 12
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Strange Matter",
+            "MachineType": "Particle Collider",
+            "NumberProduced": 1,
+            "TimeToCreate": 8,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Particle Container",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Iron Ingot",
+                    "Count": 2
+                }, {
+                    "ComponentName" "Hydrogen",
+                    "Count": 10
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Titanium Crystal",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 4,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Organic Crystal",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Titanium Ingot",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Carbon Nanotube",
+            "MachineType": "Chemical Plant",
+            "NumberProduced": 2,
+            "TimeToCreate": 4,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Graphene",
+                    "Count": 3
+                }, {
+                    "ComponentName": "Titanium Ingot",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Reinforced Thruster",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 6,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Titanium Alloy",
+                    "Count": 5
+                }, {
+                    "ComponentName": "Electromagnetic Turbine",
+                    "Count": 5
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Gear",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 1,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Iron Ingot",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Plasm Exciter",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 2,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Magnetic Coil",
+                    "Count": 4
+                }, {
+                    "ComponentName": "Prism",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Photon Combiner",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 3,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Prism",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Circuit Board",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Electromagnetic Turbine",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 2,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Electric Motor",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Magnetic Coil",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Processor",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 3,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Circuit Board",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Microcrystalline Component",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Annihilation Constraint Sphere",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 20,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Particle Container",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Processor",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Titanium Glass",
+            "MachineType": "Assembler",
+            "NumberProduced": 2,
+            "TimeToCreate": 5,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Titanium Ingot",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Glass",
+                    "Count": 2
+                }, {
+                    "ComponentName" "Water",
+                    "Count": 12
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Particle Broadband",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 8,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Plastic",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Crystal Silicon",
+                    "Count": 2
+                }, {
+                    "ComponentName" "Carbon Nanotube",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Logistics Drone",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 4,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Thruster",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Processor",
+                    "Count": 2
+                }, {
+                    "ComponentName" "Iron Ingot",
+                    "Count": 5
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Foundation",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 1,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Stone Brick",
+                    "Count": 3
+                }, {
+                    "ComponentName": "Steel",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Particle Container",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 4,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Electromagnetic Turbine",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Copper Ingot",
+                    "Count": 2
+                }, {
+                    "ComponentName" "Graphene",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Particle Container",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 4,
+            "Default": false,
+            "Inputs": [{
+                    "ComponentName": "Unipolar Magnet",
+                    "Count": 10
+                }, {
+                    "ComponentName": "Copper Ingot",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Super-Magnetic Ring",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 3,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Electromagnetic Turbine",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Magnet",
+                    "Count": 3
+                }, {
+                    "ComponentName" "Energetic Graphite",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Graviton Lens",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 6,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Strange Matter",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Titanium Crystal",
+                    "Count": 4
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Space Warper",
+            "MachineType": "Assembler",
+            "NumberProduced": 8,
+            "TimeToCreate": 10,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Gravity Matrix",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Plane Filter",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 12,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Casimir Crystal",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Titanium Glass",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Quantum Chip",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 6,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Processor",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Plane Filter",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Logistics Vessel",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 6,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Titanium Alloy",
+                    "Count": 10
+                }, {
+                    "ComponentName": "Processor",
+                    "Count": 10
+                }, {
+                    "ComponentName" "Reinforced Thruster",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Electromagnetic Matrix",
+            "MachineType": "Matrix Lab",
+            "NumberProduced": 1,
+            "TimeToCreate": 3,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Magnetic Coil",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Circuit Board",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Energy Matrix",
+            "MachineType": "Matrix Lab",
+            "NumberProduced": 1,
+            "TimeToCreate": 6,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Energetic Graphite",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Hydrogen",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Structure Matrix",
+            "MachineType": "Matrix Lab",
+            "NumberProduced": 1,
+            "TimeToCreate": 8,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Diamond",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Titanium Crystal",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Information Matrix",
+            "MachineType": "Matrix Lab",
+            "NumberProduced": 1,
+            "TimeToCreate": 10,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Processor",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Particle Broadband",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Gravity Matrix",
+            "MachineType": "Matrix Lab",
+            "NumberProduced": 2,
+            "TimeToCreate": 24,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Graviton Lens",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Quantum Chip",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Universe Matrix",
+            "MachineType": "Matrix Lab",
+            "NumberProduced": 1,
+            "TimeToCreate": 15,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Electromagnetic Matrix",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Energy Matrix",
+                    "Count": 1
+                }, {
+                    "ComponentName" "Structure Matrix",
+                    "Count": 1
+                }, {
+                    "ComponentName" "Information Matrix",
+                    "Count": 1
+                }, {
+                    "ComponentName" "Gravity Matrix",
+                    "Count": 1
+                }, {
+                    "ComponentName" "Antimatter",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Solar Sail",
+            "MachineType": "Assembler",
+            "NumberProduced": 2,
+            "TimeToCreate": 4,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Graphene",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Photon Combiner",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Frame Material",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 6,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Carbon Nanotube",
+                    "Count": 4
+                }, {
+                    "ComponentName": "Titanium Alloy",
+                    "Count": 1
+                }, {
+                    "ComponentName": "High-Purity Silicon",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Dyson Sphere Component",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 8,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Frame Material",
+                    "Count": 3
+                }, {
+                    "ComponentName": "Solar Sail",
+                    "Count": 3
+                }, {
+                    "ComponentName": "Processor",
+                    "Count": 3
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Small Carrier Rocket",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 6,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Dyson Sphere Component",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Deuteron Fuel Rod",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Quantum Chip",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": []
+        },
     ]
 }

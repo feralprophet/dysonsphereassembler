@@ -19,8 +19,8 @@ namespace DysonSphereAssembly.DAL.Repository
         public ComponentRecipe GetById(int recipeId)
         {
             var dbRecipe = _context.Recipes.Single(i => i.Id == recipeId);
-            var dbRecipeInputs = _context.ComponentInputs.Where(i => i.RecipeId == recipeId);
-            var dbRecipeAdditionalOutput = _context.AdditionalOutputs.Where(i => i.RecipeId == recipeId);
+            var dbRecipeInputs = _context.ComponentInputs.Where(i => i.RecipeId == recipeId).ToList();
+            var dbRecipeAdditionalOutput = _context.AdditionalOutputs.Where(i => i.RecipeId == recipeId).ToList();
 
             List<InputComponent> inputComponents = new List<InputComponent>();
             List<OutputComponent> outputComponents = new List<OutputComponent>();
