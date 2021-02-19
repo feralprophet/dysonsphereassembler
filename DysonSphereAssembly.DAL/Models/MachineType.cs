@@ -5,12 +5,10 @@ using System.Text;
 
 namespace DysonSphereAssembly.DAL.Models
 {
-    [Table("ComponentInputs")]
-    public class ComponentInput
+    [Table("MachineTypes")]
+    public class MachineType
     {
         public int Id { get; set; }
-        public int RecipeId { get; set; }
-        public int InputComponentId { get; set; }
-        public int AmountNeeded { get; set; }
+        public string Name { get; set; }
     }
 }

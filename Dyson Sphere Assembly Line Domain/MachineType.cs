@@ -6,10 +6,10 @@ namespace Dyson_Sphere_Assembly_Line_Domain
 {
     public enum MachineType
     {
-        Smelter,
+        Smelter=1,
         Assembler,
         OilRefinery,
-        ChemicalFacility,
+        ChemicalPlant,
         ParticleCollider
     }
 }

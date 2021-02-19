@@ -1,0 +1,35 @@
+{
+    "recipes":[{
+            "ComponentName": "Magnetic Coil",
+            "MachineType": "Assembler",
+            "NumberProduced": 2,
+            "TimeToCreate": 1,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Magnet",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Copper Ingot",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Graphene",
+            "MachineType": "Chemical Plant",
+            "NumberProduced": 2,
+            "TimeToCreate": 2,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Fire Ice",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": [{
+                    "ComponentName": "Fire Ice",
+                    "Count": 2
+                }
+            ]
+        }
+    ]
+}
