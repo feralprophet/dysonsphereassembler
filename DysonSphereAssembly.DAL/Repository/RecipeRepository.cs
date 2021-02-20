@@ -55,8 +55,12 @@ namespace DysonSphereAssembly.DAL.Repository
 
         public ComponentRecipe GetDefaultForComponent(int componentId)
         {
-            var recipeId = _context.Recipes.First(i => i.UseByDefault && i.ComponentId == componentId).Id;
-            return GetById(recipeId);
+            var recipeId = _context.Recipes.FirstOrDefault(i => i.UseByDefault && i.ComponentId == componentId)?.Id;
+            if (recipeId != null)
+            {
+                return GetById(recipeId.Value);
+            }
+            return null;
         }
 
         private Component GetComponentById(int id)

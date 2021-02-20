@@ -43,7 +43,7 @@ namespace DysonSphereAssembly.DAL.Tools
 
                     var recipe = new Recipe
                     {
-                        Name = "Component",
+                        Name = component.Name,
                         ComponentId = component.Id,
                         MachineType = machineType.Id,
                         NumberProduced = recipeImport.NumberProduced,
