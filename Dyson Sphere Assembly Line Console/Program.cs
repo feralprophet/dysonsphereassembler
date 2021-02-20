@@ -25,14 +25,15 @@ namespace Dyson_Sphere_Assembly_Line_Console
             _menu = new Menu();
 
             _menu.Add("Run Builder", GetComponent);
+            _menu.Add("Import Components Recipes", ImportComponentRecipes);
+            _menu.Add("Import Buildings Recipes", ImportBuildingRecipes);
             _menu.Add("Import Components", ImportComponents);
-            _menu.Add("Import Buildings", ImportBuildings);
+            _menu.Add("Export Components", ExportComponents);
+            _menu.Add("Exit", () => { Console.WriteLine("Exiting..."); });
             _menu.Display();
 
-            Console.BackgroundColor = ConsoleColor.Black;
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Complete");
-            Console.Read();
+
+
         }
 
         private static void GetComponent()
@@ -73,18 +74,35 @@ namespace Dyson_Sphere_Assembly_Line_Console
             {
                 RunBuild(componentId, numberDesired);
             }
+
+            ReShowMenu();
+        }
+
+        private static void ImportComponentRecipes()
+        {
+            var importTool = new JsonImport(connectionString);
+            importTool.ImportComponentRecipes("C:\\Repo\\PersonalRepo\\DysonSphereAssembler\\Data\\ComponentRecipes.json");
+            ReShowMenu();
+        }
+
+        private static void ImportBuildingRecipes()
+        {
+            var importTool = new JsonImport(connectionString);
+            importTool.ImportBuildings("C:\\Repo\\PersonalRepo\\DysonSphereAssembler\\Data\\BuildingRecipes.json");
+            ReShowMenu();
         }
 
         private static void ImportComponents()
         {
             var importTool = new JsonImport(connectionString);
-            importTool.ImportComponents("C:\\Repo\\PersonalRepo\\DysonSphereAssembler\\Data\\ComponentRecipes.json");
+            importTool.ImportComponents("C:\\Repo\\PersonalRepo\\DysonSphereAssembler\\Data\\Components.json");
+            ReShowMenu();
         }
-
-        private static void ImportBuildings()
+        public static void ExportComponents()
         {
             var importTool = new JsonImport(connectionString);
-            importTool.ImportBuildings("C:\\Repo\\PersonalRepo\\DysonSphereAssembler\\Data\\BuildingRecipes.json");
+            importTool.ExportComponents("C:\\Repo\\PersonalRepo\\DysonSphereAssembler\\Data");
+            ReShowMenu();
         }
 
         private static void RunBuild(int componentId, int numberDesired)
@@ -104,8 +122,8 @@ namespace Dyson_Sphere_Assembly_Line_Console
             {
                 Console.WriteLine(e);
             }
-           
-           
+
+
         }
 
         private static void PrintBuildResult(Build build)
@@ -192,6 +210,15 @@ namespace Dyson_Sphere_Assembly_Line_Console
             {
                 Console.WriteLine($"{baseItem.Key} : {baseItem.Value}");
             }
+        }
+
+        private static void ReShowMenu()
+        {
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Complete");
+            Console.ForegroundColor = ConsoleColor.White;
+            _menu.Display();
         }
     }
 }

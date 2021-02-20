@@ -14,6 +14,11 @@ namespace DysonSphereAssembly.DAL.Tools
         public List<RecipeImport> recipes { get; set; }
     }
 
+    public class ComponentCollection
+    {
+        public List<Component> components { get; set; }
+    }
+
     public class JsonImport
     {
         private readonly string _connectionString;
@@ -23,13 +28,13 @@ namespace DysonSphereAssembly.DAL.Tools
             _connectionString = connectionString ?? throw new ArgumentNullException(nameof(connectionString));
         }
 
-        public void ImportComponents(string path)
+        public void ImportComponentRecipes(string path)
         {
             var jsonData = File.ReadAllText(path);
 
             var result = (RecipeCollection)
-            JsonConvert.DeserializeObject(jsonData, typeof(RecipeCollection));
-            InsertComponents(result.recipes);
+                JsonConvert.DeserializeObject(jsonData, typeof(RecipeCollection));
+            InsertComponentRecipes(result.recipes);
         }
 
         public void ImportBuildings(string path)
@@ -38,10 +43,35 @@ namespace DysonSphereAssembly.DAL.Tools
 
             var result = (RecipeCollection)
                 JsonConvert.DeserializeObject(jsonData, typeof(RecipeCollection));
-            InsertBuildings(result.recipes);
+            InsertBuildingRecipes(result.recipes);
         }
 
-        private void InsertComponents(List<RecipeImport> recipes)
+        public void ImportComponents(string path)
+        {
+            var jsonData = File.ReadAllText(path);
+
+            var result = (ComponentCollection)
+                JsonConvert.DeserializeObject(jsonData, typeof(ComponentCollection));
+            InsertComponents(result.components);
+        }
+        public void ExportComponents(string path)
+        {
+            using (var context = CreateContext())
+            {
+                var components = context.Components.ToList();
+                var componentCollection = new ComponentCollection();
+                componentCollection.components = components;
+
+                var json =
+                    JsonConvert.SerializeObject(componentCollection);
+                var fullPath =
+                    Path.Combine(path, "components.json");
+
+                File.AppendAllText(fullPath, json);
+            }
+        }
+
+        private void InsertComponentRecipes(List<RecipeImport> recipes)
         {
             using (var context = CreateContext())
             {
@@ -96,7 +126,7 @@ namespace DysonSphereAssembly.DAL.Tools
             }
         }
 
-        private void InsertBuildings(List<RecipeImport> buildings)
+        private void InsertBuildingRecipes(List<RecipeImport> buildings)
         {
             using (var context = CreateContext())
             {
@@ -150,6 +180,16 @@ namespace DysonSphereAssembly.DAL.Tools
                 }
             }
         }
+
+        private void InsertComponents(List<Component> components)
+        {
+            using (var context = CreateContext())
+            {
+                context.Components.AddRange(components);
+                context.SaveChanges(true);
+            }
+        }
+
 
         private DysonSphereAssemblerContext CreateContext()
         {
