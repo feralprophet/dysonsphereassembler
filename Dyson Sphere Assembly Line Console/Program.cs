@@ -25,7 +25,8 @@ namespace Dyson_Sphere_Assembly_Line_Console
             _menu = new Menu();
 
             _menu.Add("Run Builder", GetComponent);
-            _menu.Add("Import Recipes", ImportRecipes);
+            _menu.Add("Import Components", ImportComponents);
+            _menu.Add("Import Buildings", ImportBuildings);
             _menu.Display();
 
             Console.BackgroundColor = ConsoleColor.Black;
@@ -74,10 +75,16 @@ namespace Dyson_Sphere_Assembly_Line_Console
             }
         }
 
-        private static void ImportRecipes()
+        private static void ImportComponents()
         {
             var importTool = new JsonImport(connectionString);
-            importTool.ImportRecipes("C:\\Repo\\PersonalRepo\\DysonSphereAssembler\\Data\\Components.json");
+            importTool.ImportComponents("C:\\Repo\\PersonalRepo\\DysonSphereAssembler\\Data\\ComponentRecipes.json");
+        }
+
+        private static void ImportBuildings()
+        {
+            var importTool = new JsonImport(connectionString);
+            importTool.ImportBuildings("C:\\Repo\\PersonalRepo\\DysonSphereAssembler\\Data\\BuildingRecipes.json");
         }
 
         private static void RunBuild(int componentId, int numberDesired)

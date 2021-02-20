@@ -15,5 +15,6 @@ namespace DysonSphereAssembly.DAL.Models
         public decimal TimeToCreate { get; set; }
         public int NumberProduced { get; set; }
         public bool UseByDefault { get; set; }
+        public bool IsBuilding { get; set; }
     }
 }
