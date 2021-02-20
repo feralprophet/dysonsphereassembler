@@ -37,6 +37,7 @@ namespace Dyson_Sphere_Assembly_Line_Console
         private static void GetComponent()
         {
             int componentId = 0;
+            int numberDesired = 0;
             string response = string.Empty;
             do
             {
@@ -53,9 +54,23 @@ namespace Dyson_Sphere_Assembly_Line_Console
                 }
             } while (componentId == 0 || response.ToLower() != "exit");
 
-            if (componentId != 0)
+            do
             {
-                RunBuild(componentId);
+                Console.Write("Desired Per Minute: ");
+                response = Console.ReadLine();
+                if (!int.TryParse(response, out numberDesired))
+                {
+                    Console.WriteLine("Not a number");
+                }
+                else
+                {
+                    break;
+                }
+            } while (numberDesired == 0 || response.ToLower() != "exit");
+
+            if (componentId != 0 && numberDesired != 0)
+            {
+                RunBuild(componentId, numberDesired);
             }
         }
 
@@ -65,7 +80,7 @@ namespace Dyson_Sphere_Assembly_Line_Console
             importTool.ImportRecipes("C:\\Repo\\PersonalRepo\\DysonSphereAssembler\\Data\\Components.json");
         }
 
-        private static void RunBuild(int componentId)
+        private static void RunBuild(int componentId, int numberDesired)
         {
             var builder = new Builder(new UnitOfWorkFactory(connectionString));
             try
@@ -73,7 +88,7 @@ namespace Dyson_Sphere_Assembly_Line_Console
                 var build =
                     builder.CreateBuild(componentId);
 
-                build.DesiredPerMinute = 60;
+                build.DesiredPerMinute = numberDesired;
 
 
                 PrintBuildResult(build);
