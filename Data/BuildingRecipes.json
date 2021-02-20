@@ -497,7 +497,7 @@
             ],
             "AdditionalOutput": []
         },{
-            "ComponentName": "Particle Collider",
+            "ComponentName": "Miniature Particle Collider",
             "MachineType": "Assembler",
             "NumberProduced": 1,
             "TimeToCreate": 15,

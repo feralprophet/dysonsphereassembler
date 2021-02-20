@@ -29,7 +29,7 @@
 		}]
 	}, {
 		"ComponentName": "Deuterium",
-		"MachineType": "Particle Collider",
+		"MachineType": "Miniature Particle Collider",
 		"NumberProduced": 5,
 		"TimeToCreate": 5,
 		"Default": true,
@@ -435,7 +435,7 @@
 		"AdditionalOutput": []
 	}, {
 		"ComponentName": "Strange Matter",
-		"MachineType": "Particle Collider",
+		"MachineType": "Miniature Particle Collider",
 		"NumberProduced": 1,
 		"TimeToCreate": 8,
 		"Default": true,
