@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using Dyson_Sphere_Assembly_Line_Domain;
 using DysonSphereAssembly.DAL.Tools;
 using EasyConsole;
+using Microsoft.Extensions.Configuration;
 
 namespace Dyson_Sphere_Assembly_Line_Console
 {
@@ -11,8 +13,7 @@ namespace Dyson_Sphere_Assembly_Line_Console
     {
         private static bool verbose = false;
         private static Menu _menu;
-        private static string connectionString = "Data Source=localhost;Initial Catalog=DysonSphereAssembler;Integrated Security=True";
-
+        private static IConfiguration _config;
         private static List<Tuple<int, ConsoleColor, ConsoleColor>> colors = new List<Tuple<int, ConsoleColor, ConsoleColor>>
         {
             new Tuple<int, ConsoleColor, ConsoleColor>(1, ConsoleColor.Gray, ConsoleColor.Black),
@@ -22,6 +23,12 @@ namespace Dyson_Sphere_Assembly_Line_Console
 
         static void Main(string[] args)
         {
+            _config = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .AddEnvironmentVariables()
+                .AddCommandLine(args)
+                .Build();
+
             _menu = new Menu();
 
             _menu.Add("Run Builder", GetComponent);
@@ -80,33 +87,50 @@ namespace Dyson_Sphere_Assembly_Line_Console
 
         private static void ImportComponentRecipes()
         {
+            var connectionString = _config.GetValue<string>("ConnectionString");
+            var basePath = _config.GetValue<string>("BasePath");
+            var fileName = _config.GetValue<string>("Files:ComponentRecipes");
+            var fullPath = Path.Combine(basePath, fileName);
             var importTool = new JsonImport(connectionString);
-            importTool.ImportComponentRecipes("C:\\Repo\\PersonalRepo\\DysonSphereAssembler\\Data\\ComponentRecipes.json");
+            importTool.ImportComponentRecipes(fullPath);
             ReShowMenu();
         }
 
         private static void ImportBuildingRecipes()
         {
+            var connectionString = _config.GetValue<string>("ConnectionString");
+            var basePath = _config.GetValue<string>("BasePath");
+            var fileName = _config.GetValue<string>("Files:BuildingRecipes");
+            var fullPath = Path.Combine(basePath, fileName);
             var importTool = new JsonImport(connectionString);
-            importTool.ImportBuildings("C:\\Repo\\PersonalRepo\\DysonSphereAssembler\\Data\\BuildingRecipes.json");
+            importTool.ImportBuildings(fullPath);
             ReShowMenu();
         }
 
         private static void ImportComponents()
         {
+            var connectionString = _config.GetValue<string>("ConnectionString");
+            var basePath = _config.GetValue<string>("BasePath");
+            var fileName = _config.GetValue<string>("Files:Components");
+            var fullPath = Path.Combine(basePath, fileName);
             var importTool = new JsonImport(connectionString);
-            importTool.ImportComponents("C:\\Repo\\PersonalRepo\\DysonSphereAssembler\\Data\\Components.json");
+            importTool.ImportComponents(fullPath);
             ReShowMenu();
         }
         public static void ExportComponents()
         {
+            var connectionString = _config.GetValue<string>("ConnectionString");
+            var basePath = _config.GetValue<string>("BasePath");
+            var fileName = _config.GetValue<string>("Files:Component");
+            var fullPath = Path.Combine(basePath, fileName);
             var importTool = new JsonImport(connectionString);
-            importTool.ExportComponents("C:\\Repo\\PersonalRepo\\DysonSphereAssembler\\Data");
+            importTool.ExportComponents(fullPath);
             ReShowMenu();
         }
 
         private static void RunBuild(int componentId, int numberDesired)
         {
+            var connectionString = _config.GetValue<string>("ConnectionString");
             var builder = new Builder(new UnitOfWorkFactory(connectionString));
             try
             {
