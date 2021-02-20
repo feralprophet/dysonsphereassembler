@@ -34,19 +34,27 @@ namespace Dyson_Sphere_Assembly_Line_Domain
         private BuildComponent CreateBuildComponent(int componentId, IUnitOfWork uow)
         {
             var recipe = uow.Recipes.GetDefaultForComponent(componentId);
-            var machine = uow.Machines.GetByType(recipe.MachineType);
+            if (recipe != null)
+            {
+                var machine = uow.Machines.GetByType(recipe.MachineType);
 
-            List<BuildComponent> inputComponents = new List<BuildComponent>();
-            foreach (var componentInput in recipe.InputComponents)
-            {
-                inputComponents.Add(CreateBuildComponent(componentInput.Component.Id,  uow));
+                List<BuildComponent> inputComponents = new List<BuildComponent>();
+                foreach (var componentInput in recipe.InputComponents)
+                {
+                    var newBuildComponent = CreateBuildComponent(componentInput.Component.Id, uow);
+                    if (newBuildComponent != null)
+                    {
+                        inputComponents.Add(newBuildComponent);
+                    }
+                }
+                return new BuildComponent
+                {
+                    Recipe = recipe,
+                    BuilderMachine = machine,
+                    InputComponents = inputComponents
+                };
             }
-            return  new BuildComponent
-            {
-                Recipe = recipe,
-                BuilderMachine = machine,
-                InputComponents = inputComponents
-            };
+            return null;
         }
     }
 }

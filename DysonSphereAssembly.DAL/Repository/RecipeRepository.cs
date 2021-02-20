@@ -19,8 +19,8 @@ namespace DysonSphereAssembly.DAL.Repository
         public ComponentRecipe GetById(int recipeId)
         {
             var dbRecipe = _context.Recipes.Single(i => i.Id == recipeId);
-            var dbRecipeInputs = _context.ComponenetInputs.Where(i => i.RecipeId == recipeId);
-            var dbRecipeAdditionalOutput = _context.AdditionalOutputs.Where(i => i.RecipeId == recipeId);
+            var dbRecipeInputs = _context.ComponentInputs.Where(i => i.RecipeId == recipeId).ToList();
+            var dbRecipeAdditionalOutput = _context.AdditionalOutputs.Where(i => i.RecipeId == recipeId).ToList();
 
             List<InputComponent> inputComponents = new List<InputComponent>();
             List<OutputComponent> outputComponents = new List<OutputComponent>();
@@ -55,8 +55,12 @@ namespace DysonSphereAssembly.DAL.Repository
 
         public ComponentRecipe GetDefaultForComponent(int componentId)
         {
-            var recipeId = _context.Recipes.First(i => i.UseByDefault && i.ComponentId == componentId).Id;
-            return GetById(recipeId);
+            var recipeId = _context.Recipes.FirstOrDefault(i => i.UseByDefault && i.ComponentId == componentId)?.Id;
+            if (recipeId != null)
+            {
+                return GetById(recipeId.Value);
+            }
+            return null;
         }
 
         private Component GetComponentById(int id)

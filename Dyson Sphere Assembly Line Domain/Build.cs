@@ -17,7 +17,7 @@ namespace Dyson_Sphere_Assembly_Line_Domain
                 if (value != _desiredPerMinute)
                 {
                     _desiredPerMinute = value;
-                    RecalculateBuildAmount();
+                    ComponentToBuild.BuildTargetPerMinute = _desiredPerMinute;
                 }
             }
         }

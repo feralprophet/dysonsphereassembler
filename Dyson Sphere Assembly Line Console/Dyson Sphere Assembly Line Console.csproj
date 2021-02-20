@@ -6,4 +6,9 @@
     <RootNamespace>Dyson_Sphere_Assembly_Line_Console</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Dyson Sphere Assembly Line Domain\Dyson Sphere Assembly Line Domain.csproj" />
+    <ProjectReference Include="..\DysonSphereAssembly.DAL\DysonSphereAssembly.DAL.csproj" />
+  </ItemGroup>
+
 </Project>

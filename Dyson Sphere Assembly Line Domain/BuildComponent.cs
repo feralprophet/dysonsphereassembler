@@ -44,7 +44,7 @@ namespace Dyson_Sphere_Assembly_Line_Domain
         {
             foreach (var inputComponent in InputComponents)
             {
-                inputComponent.BuildTargetPerMinute = _buildTargetPerMinute * Recipe.InputComponents.Single(i => i.Component.Id == Recipe.Component.Id).AmountNeeded;
+                inputComponent.BuildTargetPerMinute = _buildTargetPerMinute * Recipe.InputComponents.Single(i => i.Component.Id == inputComponent.Recipe.Component.Id).AmountNeeded;
             }
         }
 
