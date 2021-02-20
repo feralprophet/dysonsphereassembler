@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="EasyConsole" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Dyson Sphere Assembly Line Domain\Dyson Sphere Assembly Line Domain.csproj" />
     <ProjectReference Include="..\DysonSphereAssembly.DAL\DysonSphereAssembly.DAL.csproj" />
   </ItemGroup>
