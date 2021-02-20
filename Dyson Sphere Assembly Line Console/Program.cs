@@ -240,8 +240,10 @@ namespace Dyson_Sphere_Assembly_Line_Console
         {
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Complete");
+            Console.WriteLine("Complete\r\n");
+            Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("\r\n");
             _menu.Display();
         }
     }
