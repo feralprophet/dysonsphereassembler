@@ -1,0 +1,689 @@
+{
+    "recipes": [{
+            "ComponentName": "Tesla Tower",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 1,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Iron Ingot",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Magnetic Coil",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Wireless Power Tower",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 3,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Tesla Tower",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Plasma Exciter",
+                    "Count": 3
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Wind Turbine",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 4,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Iron Ingot",
+                    "Count": 6
+                }, {
+                    "ComponentName": "Gear",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Magnetic Coil",
+                    "Count": 3
+                }
+            ],
+            "AdditionalOutput": []
+        }, {
+            "ComponentName": "Thermal Power Station",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 5,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Iron Ingot",
+                    "Count": 10
+                }, {
+                    "ComponentName": "Stone Brick",
+                    "Count": 4
+                }, {
+                    "ComponentName": "Gear",
+                    "Count": 4
+                }, {
+                    "ComponentName": "Magnetic Coil",
+                    "Count": 4
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Solar Panel",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 5,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Copper Ingot",
+                    "Count": 6
+                }, {
+                    "ComponentName": "High-purity Silicon",
+                    "Count": 6
+                }, {
+                    "ComponentName": "Circuit Board",
+                    "Count": 4
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Mini Fusion Power Station",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 10,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Titanium Alloy",
+                    "Count": 12
+                }, {
+                    "ComponentName": "Super-Magnetic Ring",
+                    "Count": 10
+                }, {
+                    "ComponentName": "Carbon Nanotube",
+                    "Count": 8
+                }, {
+                    "ComponentName": "Processor",
+                    "Count": 4
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Accumulator",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 5,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Iron Ingot",
+                    "Count": 6
+                }, {
+                    "ComponentName": "Super-Magnetic Ring",
+                    "Count": 6
+                }, {
+                    "ComponentName": "Crystal Silicon",
+                    "Count": 4
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Energy Exchanger",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 15,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Titanium Alloy",
+                    "Count": 40
+                }, {
+                    "ComponentName": "Steel",
+                    "Count": 40
+                }, {
+                    "ComponentName": "Processor",
+                    "Count": 40 
+                }, {
+                    "ComponentName": "Particle Container",
+                    "Count": 8
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Ray Receiver",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 8,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Steel",
+                    "Count": 20
+                }, {
+                    "ComponentName": "High-purity Silicon",
+                    "Count": 20
+                }, {
+                    "ComponentName": "Photon Combiner",
+                    "Count": 10
+                }, {
+                    "ComponentName": "Processor",
+                    "Count": 5
+                },
+                 {
+                    "ComponentName": "Super-Magnetic Ring",
+                    "Count": 20
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Artificial Star",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 30,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Steel",
+                    "Count": 20
+                }, {
+                    "ComponentName": "Frame Material",
+                    "Count": 20
+                }, {
+                    "ComponentName": "Annihilation Constraint Sphere",
+                    "Count": 10
+                }, {
+                    "ComponentName": "Quantum Chip",
+                    "Count": 10
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Conveyor Belt Mk.1",
+            "MachineType": "Assembler",
+            "NumberProduced": 3,
+            "TimeToCreate": 1,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Iron Ingot",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Gear",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Conveyor Belt Mk.2",
+            "MachineType": "Assembler",
+            "NumberProduced": 3,
+            "TimeToCreate": 1,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Conveyor Belt Mk.1",
+                    "Count": 3
+                }, {
+                    "ComponentName": "Electromagnetic Turbine",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Conveyor Belt Mk.3",
+            "MachineType": "Assembler",
+            "NumberProduced": 3,
+            "TimeToCreate": 1,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Super-Magnetic Ring",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Conveyor Belt Mk.2",
+                    "Count": 3
+                }, {
+                    "ComponentName": "Graphene",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Splitter",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 2,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Iron Ingot",
+                    "Count": 3
+                }, {
+                    "ComponentName": "Gear",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Circuit Board",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Storage Mk.1",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 2,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Iron Ingot",
+                    "Count": 4
+                }, {
+                    "ComponentName": "Stone Brick",
+                    "Count": 4
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Storage Mk.2",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 4,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Steel",
+                    "Count": 8
+                }, {
+                    "ComponentName": "Stone Brick",
+                    "Count": 8
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Storage Tank",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 2,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Iron Ingot",
+                    "Count": 8
+                }, {
+                    "ComponentName": "Stone Brick",
+                    "Count": 4
+                }, {
+                    "ComponentName": "Glass",
+                    "Count": 4
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Planetary Logistics Station",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 20,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Steel",
+                    "Count": 40
+                }, {
+                    "ComponentName": "Titanium Ingot",
+                    "Count": 40
+                }, {
+                    "ComponentName": "Processor",
+                    "Count": 40
+                }, {
+                    "ComponentName": "Particle Container",
+                    "Count": 20
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Interstellar Logistics Station",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 30,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Planetary Logistics Station",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Titanium Alloy",
+                    "Count": 50
+                }, {
+                    "ComponentName": "Particle Container",
+                    "Count": 20
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Orbital Collector",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 30,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Interstellar Logistics Station",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Super-Magnetic Ring",
+                    "Count": 50
+                }, {
+                    "ComponentName": "Reinforced Thruster",
+                    "Count": 20
+                }, {
+                    "ComponentName": "Accumulator",
+                    "Count": 20
+                }
+            ],
+            "AdditionalOutput": []
+        },
+        {
+            "ComponentName": "EM-Rail Ejector",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 6,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Steel",
+                    "Count": 20
+                }, {
+                    "ComponentName": "Gear",
+                    "Count": 20
+                }, {
+                    "ComponentName": "Processor",
+                    "Count": 5
+                }, {
+                    "ComponentName": "Super-Magnetic Ring",
+                    "Count": 10
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Sorter Mk.1",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 1,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Iron Ingot",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Circuit Board",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Sorter Mk.2",
+            "MachineType": "Assembler",
+            "NumberProduced": 2,
+            "TimeToCreate": 1,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Sorter Mk.1",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Electric Motor",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Sorter Mk.3",
+            "MachineType": "Assembler",
+            "NumberProduced": 2,
+            "TimeToCreate": 1,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Sorter Mk.2",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Electromagnetic Turbine",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Mining Machine",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 3,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Iron Ingot",
+                    "Count": 4
+                }, {
+                    "ComponentName": "Circuit Board",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Magnetic Coil",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Gear",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Water Pump",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 4,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Iron Ingot",
+                    "Count": 8
+                }, {
+                    "ComponentName": "Stone Brick",
+                    "Count": 4
+                }, {
+                    "ComponentName": "Electric Motor",
+                    "Count": 4
+                }, {
+                    "ComponentName": "Circuit Board",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Oil Extractor",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 8,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Steel",
+                    "Count": 12
+                }, {
+                    "ComponentName": "Stone Brick",
+                    "Count": 12
+                }, {
+                    "ComponentName": "Circuit Board",
+                    "Count": 6
+                }, {
+                    "ComponentName": "Plasma Exciter",
+                    "Count": 4
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Particle Collider",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 15,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Titanium Alloy",
+                    "Count": 20
+                }, {
+                    "ComponentName": "Frame Material",
+                    "Count": 20
+                }, {
+                    "ComponentName": "Super-Magnetic Ring",
+                    "Count": 50
+                }, {
+                    "ComponentName": "Graphene",
+                    "Count": 10
+                },
+                 {
+                    "ComponentName": "Processor",
+                    "Count": 8
+                }
+            ],
+            "AdditionalOutput": []
+
+        }, {
+            "ComponentName": "Matrix Lab",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 3,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Iron Ingot",
+                    "Count": 8
+                }, {
+                    "ComponentName": "Glass",
+                    "Count": 4
+                }, {
+                    "ComponentName": "Circuit Board",
+                    "Count": 4
+                }, {
+                    "ComponentName": "Magnetic Coil",
+                    "Count": 4
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Vertical Launching Silo",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 30,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Titanium Alloy",
+                    "Count": 80
+                }, {
+                    "ComponentName": "Frame Material",
+                    "Count": 30
+                }, {
+                    "ComponentName": "Graviton Lens",
+                    "Count": 20
+                }, {
+                    "ComponentName": "Quantum Chip",
+                    "Count": 10
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Assembling Machine Mk.1",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 2,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Iron Ingot",
+                    "Count": 4
+                }, {
+                    "ComponentName": "Gear",
+                    "Count": 8
+                }, {
+                    "ComponentName": "Circuit Board",
+                    "Count": 4
+                }
+            ],
+            "AdditionalOutput": []
+        },
+        {
+            "ComponentName": "Assembling Machine Mk.2",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 3,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Assembling Machine Mk.1",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Graphene",
+                    "Count": 8
+                }, {
+                    "ComponentName": "Processor",
+                    "Count": 4
+                }
+            ],
+            "AdditionalOutput": []
+        },
+        {
+            "ComponentName": "Assembling Machine Mk.3",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 4,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Assembling Machine Mk.2",
+                    "Count": 1
+                }, {
+                    "ComponentName": "Particle Broadband",
+                    "Count": 8
+                }, {
+                    "ComponentName": "Quantum Chip",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": []
+        },
+        {
+            "ComponentName": "Smelter",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 3,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Iron Ingot",
+                    "Count": 4
+                }, {
+                    "ComponentName": "Stone Brick",
+                    "Count": 2
+                }, {
+                    "ComponentName": "Circuit Board",
+                    "Count": 4
+                }, {
+                    "ComponentName": "Magnetic Coil",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Chemical Plant",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 5,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Steel",
+                    "Count": 8
+                }, {
+                    "ComponentName": "Stone Brick",
+                    "Count": 8
+                }, {
+                    "ComponentName": "Glass",
+                    "Count": 8
+                }, {
+                    "ComponentName": "Circuit Board",
+                    "Count": 2
+                }
+            ],
+            "AdditionalOutput": []
+        },{
+            "ComponentName": "Fractionator",
+            "MachineType": "Assembler",
+            "NumberProduced": 1,
+            "TimeToCreate": 3,
+            "Default": true,
+            "Inputs": [{
+                    "ComponentName": "Steel",
+                    "Count": 8
+                }, {
+                    "ComponentName": "Stone Brick",
+                    "Count": 4
+                }, {
+                    "ComponentName": "Glass",
+                    "Count": 4
+                }, {
+                    "ComponentName": "Processor",
+                    "Count": 1
+                }
+            ],
+            "AdditionalOutput": []
+        },
+    ]
+}
