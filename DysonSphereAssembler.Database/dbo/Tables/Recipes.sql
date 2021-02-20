@@ -6,8 +6,11 @@
     [TimeToCreate]   DECIMAL (18, 1) NOT NULL,
     [NumberProduced] INT             NOT NULL,
     [UseByDefault]   BIT             CONSTRAINT [DF_Recipes_UseByDefault] DEFAULT ((0)) NOT NULL,
+    [IsBuilding]     BIT             CONSTRAINT [DF_Recipes_IsBuilding] DEFAULT ((0)) NOT NULL,
     CONSTRAINT [PK_Recipes] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
+
+
 
 
 
