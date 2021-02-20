@@ -27,12 +27,13 @@ namespace Dyson_Sphere_Assembly_Line_Console
             builder.CreateBuild(71);
 
             build.DesiredPerMinute = 60;
-            
-            
+
+
             PrintBuildResult(build);
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Complete");
+            Console.Read();
         }
 
         private static void PrintBuildResult(Build build)
@@ -56,7 +57,7 @@ namespace Dyson_Sphere_Assembly_Line_Console
             {
                 Console.Write("-");
             }
-            Console.Write($"{buildComponent.Recipe.Component.Name} needs {buildComponent.NumberOfBuilders} {buildComponent.Recipe.MachineType}(s)\r\n");
+            Console.Write($"{buildComponent.Recipe.Component.Name} needs {buildComponent.NumberOfBuilders} {buildComponent.Recipe.MachineType}(s) To Produce {buildComponent.ProducedPerMinute} with a build target of {buildComponent.BuildTargetPerMinute}\r\n");
             foreach (var buildComponentInputComponent in buildComponent.InputComponents)
             {
                 PrintBuildComponenet(buildComponentInputComponent, level +1);
