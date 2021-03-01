@@ -13,6 +13,8 @@ namespace Dyson_Sphere_Assembly_Line_Console
     {
         private static bool verbose = false;
         private static Menu _menu;
+        private static Menu _inputCalcualtorMenu;
+        private static decimal machineModifier = 0.0m;
         private static IConfiguration _config;
         private static List<Tuple<int, ConsoleColor, ConsoleColor>> colors = new List<Tuple<int, ConsoleColor, ConsoleColor>>
         {
@@ -30,8 +32,12 @@ namespace Dyson_Sphere_Assembly_Line_Console
                 .Build();
 
             _menu = new Menu();
-
+            _inputCalcualtorMenu = new Menu();
+            _inputCalcualtorMenu.Add("Slow", () => { machineModifier = .75m; });
+            _inputCalcualtorMenu.Add("Normal", () => { machineModifier = 1m; });
+            _inputCalcualtorMenu.Add("Fast", () => { machineModifier = 1.5m; });
             _menu.Add("Run Builder", GetComponent);
+            _menu.Add("Run Input Calculator", RunInputCalculator);
             _menu.Add("Import Components Recipes", ImportComponentRecipes);
             _menu.Add("Import Buildings Recipes", ImportBuildingRecipes);
             _menu.Add("Import Components", ImportComponents);
@@ -43,6 +49,70 @@ namespace Dyson_Sphere_Assembly_Line_Console
 
         }
 
+        static void RunInputCalculator()
+        {
+            var inputCalculator = new InputCalculator();
+            machineModifier = 0.0m;
+            do
+            {
+                var result = PrintInputMessage("Recipe Time");
+                if (decimal.TryParse(result, out decimal value))
+                {
+                    inputCalculator.RecipeTime = value;
+                }
+                else 
+                {
+                    Console.WriteLine("Invalid Value");
+                }
+
+            } while (inputCalculator.RecipeTime == 0.0m);
+
+            do
+            {
+                Console.WriteLine("Build Modifier:");
+                _inputCalcualtorMenu.Display();
+                inputCalculator.MachineModifier = machineModifier;
+
+            } while (inputCalculator.MachineModifier == 0.0m);
+
+            do
+            {
+                var result = PrintInputMessage("Belt Speed");
+                if (int.TryParse(result, out int value))
+                {
+                    inputCalculator.BeltSpeed = value;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Value");
+                }
+            } while (inputCalculator.BeltSpeed == 0);
+
+            do
+            {
+                var result = PrintInputMessage("Input Amount");
+                if (int.TryParse(result, out int value))
+                {
+                    inputCalculator.InputAmount = value;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Value");
+                }
+
+            } while (inputCalculator.InputAmount == 0);
+
+            Console.WriteLine($"The number of machines needed is {inputCalculator.CalculateMachinesNeeded()}");
+
+            ReShowMenu();
+        }
+
+        private static string PrintInputMessage(string message)
+        {
+            Console.WriteLine(message + ":");
+            var result = Console.ReadLine();
+            return result;
+        }
         private static void GetComponent()
         {
             int componentId = 0;
