@@ -164,8 +164,7 @@ namespace Dyson_Sphere_Assembly_Line_Console
             }
             var summaryCount = new SummaryCount();
             CalculateSummary(build.ComponentToBuild, summaryCount);
-            Console.BackgroundColor = ConsoleColor.Magenta;
-            Console.ForegroundColor = ConsoleColor.Yellow;
+           
             PrintSummary(summaryCount);
         }
         private static void PrintBuildComponenet(BuildComponent buildComponent, int level)
@@ -204,6 +203,8 @@ namespace Dyson_Sphere_Assembly_Line_Console
                 counts.MachineCount.Add(buildComponent.BuilderMachine.MachineType, buildComponent.NumberOfBuilders);
             }
 
+
+
             if (buildComponent.Recipe.Component.IsBasic)
             {
                 if (counts.BaseItemCount.ContainsKey(buildComponent.Recipe.Component.Name))
@@ -215,6 +216,17 @@ namespace Dyson_Sphere_Assembly_Line_Console
                     counts.BaseItemCount.Add(buildComponent.Recipe.Component.Name, buildComponent.ProducedPerMinute);
                 }
             }
+            else 
+            {
+                if (counts.ComponentCounts.ContainsKey(buildComponent.Recipe.Component.Name))
+                {
+                    counts.ComponentCounts[buildComponent.Recipe.Component.Name] += buildComponent.ProducedPerMinute;
+                }
+                else
+                {
+                    counts.ComponentCounts.Add(buildComponent.Recipe.Component.Name, buildComponent.ProducedPerMinute);
+                }
+            }
 
             foreach (var buildComponentInputComponent in buildComponent.InputComponents)
             {
@@ -224,11 +236,19 @@ namespace Dyson_Sphere_Assembly_Line_Console
 
         private static void PrintSummary(SummaryCount counts)
         {
+            Console.BackgroundColor = ConsoleColor.Magenta;
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("------Machine Counts--------");
             foreach (var machine in counts.MachineCount)
             {
                 Console.WriteLine($"{machine.Key} : {machine.Value}");
             }
+            Console.WriteLine("------Component Counts--------");
+            foreach (var component in counts.ComponentCounts)
+            {
+                Console.WriteLine($"{component.Key} : {component.Value}");
+            }
+
             Console.WriteLine($"\r\n-----Basic Count-----");
             foreach (var baseItem in counts.BaseItemCount)
             {
