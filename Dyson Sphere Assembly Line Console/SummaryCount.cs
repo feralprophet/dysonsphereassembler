@@ -13,6 +13,7 @@ namespace Dyson_Sphere_Assembly_Line_Console
         public decimal OilRefinery { get; set; }
         public decimal ParticleCollider { get; set; }
         public decimal MatrixLab { get; set; }
+        public Dictionary<string, decimal> ComponentCounts { get; set; } = new Dictionary<string, decimal>();
         public Dictionary<string, decimal> BaseItemCount { get; set; } = new Dictionary<string, decimal>();
         public Dictionary<MachineType, decimal> MachineCount { get; set; } = new Dictionary<MachineType, decimal>();
     }
